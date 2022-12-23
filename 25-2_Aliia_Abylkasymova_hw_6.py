@@ -2,7 +2,6 @@ import re
 while True:
     with open('MOCK_DATA.txt', 'r') as file:
         info = file.read()
-    # print(info)
         name = re.findall(r"[A-Z][a-z-]+\s+[A-Za-d][A-Za-z- O']+", info)
         emails = re.findall(r'[a-z0-9]+@[a-z.0-9-]+', info)
         files = re.findall(r'[A-Za-z]+[A-Z]+[a-z]+\.[a-z]+\d|[A-Z]+[a-z]+\.[a-z]+\d|'
@@ -12,31 +11,6 @@ while True:
 
     user_input = int(input(' 1 - Считать имена и фамилии\n 2 - Считать все емайлы\n 3 - Считать названия файлов\n '
                            '4 - Считать цвета\n 5 - Выход\n'))
-
-# print(user_input)
-# while user_input == '5':
-#     if user_input == '1':
-#         n = open('name.txt', 'w')
-#         for i in name:
-#             n.write(i)
-#             print(len(name))
-#     if user_input == '2':
-#         e = open('emails.txt', 'w')
-#         for i in emails:
-#             e.write(i)
-#             print(len(emails))
-#     if user_input == '3':
-#         s = open('file.txt', 'w')
-#         for i in files:
-#             s.write(i)
-#             print(len(files))
-#     if user_input == '4':
-#         cc = open('color.txt', 'w')
-#         for i in color:
-#             cc.write(i)
-#             print(len(color))
-#     if user_input == '5':
-#         break
 
     if user_input == 1:
         with open('name.txt', 'w') as name_file:
